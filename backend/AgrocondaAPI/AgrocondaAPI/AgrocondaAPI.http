@@ -1,0 +1,6 @@
+@AgrocondaAPI_HostAddress = http://localhost:5297
+
+GET {{AgrocondaAPI_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
