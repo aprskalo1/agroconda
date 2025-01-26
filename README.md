@@ -16,7 +16,7 @@ A smart farming application designed to manage agricultural parcels with feature
 ## Prerequisites
 
 1. **MSSQL Server** (running instance) or ensure you have **PostgreSQL** if you prefer Postgres.
-2. **.NET SDK 8.0** (or later).
+2. **.NET SDK 8.0**
 3. **Docker** installed and configured on your machine.
 
 ---
