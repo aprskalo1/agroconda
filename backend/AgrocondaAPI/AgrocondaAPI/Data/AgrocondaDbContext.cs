@@ -31,6 +31,9 @@ public class AgrocondaDbContext(DbContextOptions<AgrocondaDbContext> options) : 
 
     public DbSet<AgroTask> AgroTasks { get; set; }
 
+    public DbSet<ParcelGroup> ParcelGroups { get; set; }
+
+    public DbSet<AssignedItemParcel> AssignedItemParcels { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {

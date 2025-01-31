@@ -3,6 +3,7 @@ using System;
 using AgrocondaAPI.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,11 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace AgrocondaAPI.Migrations
 {
     [DbContext(typeof(AgrocondaDbContext))]
-    partial class AgrocondaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250131211718_Models&RelationsUpdate")]
+    partial class ModelsRelationsUpdate
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
