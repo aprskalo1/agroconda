@@ -1,4 +1,5 @@
 using System.Text;
+using System.Text.Json.Serialization;
 using AgrocondaAPI.Data;
 using AgrocondaAPI.Mapping;
 using AgrocondaAPI.Middleware;
@@ -25,6 +26,9 @@ builder.Services.AddAutoMapper(typeof(AutoMapperProfile));
 
 builder.Services.AddDbContext<AgrocondaDbContext>(options =>
     options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddControllers()
+    .AddJsonOptions(options => { options.JsonSerializerOptions.Converters.Add(new JsonStringEnumConverter()); });
 
 builder.Services.AddAuthentication(options =>
     {
